@@ -1,0 +1,9 @@
+.modal_adding{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.btn_add{
+    width: 100px;
+    height: 35px;
+}

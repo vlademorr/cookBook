@@ -1,0 +1,33 @@
+.modal_accordion{
+    margin-top: 10px;
+}
+
+.modal_accordion_toggle{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: background-color linear 0.1s;
+}
+
+.modal_accordion_toggle p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+.modal_accordion_toggle:hover{
+    background-color: #d6dce7;
+    transition: background-color linear 0.1s;
+}
+
+.modal_card_body{
+    font-family: 'Simonetta';
+    white-space: pre-wrap;
+}
+
+.modal_card_header{
+    display: flex;
+    justify-content: center;
+}

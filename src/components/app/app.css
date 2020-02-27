@@ -1,0 +1,35 @@
+#root{
+  margin: 10px;
+}
+
+.cookbook_list{
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.header_bottom{
+    max-width: 500px;
+    width: fit-content;
+    font-family: 'Simonetta';
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header_bottom h2{
+    display: flex;
+    justify-content: center;
+    color: dimgray;
+    margin-top: 10px;
+}
+
+.header {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 {
+    font-family: 'Yeon Sung';
+}
