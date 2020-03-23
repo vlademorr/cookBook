@@ -1,9 +1,23 @@
-.modal_adding{
+.modal_adding {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
-.btn_add{
-    width: 100px;
+
+.btn_add {
+    box-shadow: 0 0 10px white;
+    background-color: #fffe34 !important;
+    border-color: white !important;
+    color: black !important;
+    align-self: center;
+    width: 110px;
     height: 35px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    transition: background-color linear 0.1s !important;
+}
+
+.btn_add:hover {
+    background-color: #d8d72f !important;
+    transition: background-color linear 0.1s;
 }

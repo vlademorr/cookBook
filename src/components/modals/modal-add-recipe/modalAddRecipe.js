@@ -1,24 +1,13 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { connect } from "react-redux";
-import { addNewRecipeOnServer } from "../../../actions";
+import "./modalAddRecipe.css";
 
-const ModalAddRecipe = ({showModal, addRecipe, handleClose}) => {
+const ModalAddRecipe = ({ showModal, addRecipeClickHandler, handleClose }) => {
     const [titleRecipe, setTitleRecipe] = useState(null);
     const [IngredientsRecipe, setIngredientsRecipe] = useState(null);
     const [howToCookRecipe, setHowToCookRecipe] = useState(null);
 
-    function addRecipeClickHandler() {
-        handleClose();
-        addRecipe(
-            titleRecipe.value,
-            IngredientsRecipe.value,
-            howToCookRecipe.value
-        );
-    }
-
-
-    return(
+    return (
         <Modal show={showModal} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Adding Recipes</Modal.Title>
@@ -26,14 +15,14 @@ const ModalAddRecipe = ({showModal, addRecipe, handleClose}) => {
             <form action=""></form>
             <Modal.Body className="modal_adding">
                 <div>Enter new recipe</div>
-                <Form.Control type="text" ref={setTitleRecipe} placeholder="Title" />
+                <Form.Control type="text" ref={setTitleRecipe} placeholder="Title"/>
                 <Form>
                     <Form.Group>
                         <Form.Label>Enter Ingredients</Form.Label>
-                        <Form.Control ref={setIngredientsRecipe} as="textarea" rows="3" />
+                        <Form.Control ref={setIngredientsRecipe} as="textarea" rows="3"/>
 
                         <Form.Label>How To Cook</Form.Label>
-                        <Form.Control ref={setHowToCookRecipe} as="textarea" rows="3" />
+                        <Form.Control ref={setHowToCookRecipe} as="textarea" rows="3"/>
                     </Form.Group>
                 </Form>
             </Modal.Body>
@@ -41,7 +30,11 @@ const ModalAddRecipe = ({showModal, addRecipe, handleClose}) => {
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="success" onClick={addRecipeClickHandler}>
+                <Button
+                    variant="warning"
+                    className="btn_add_in_modal"
+                    onClick={() => addRecipeClickHandler(titleRecipe, IngredientsRecipe, howToCookRecipe)}
+                >
                     Add Recipe
                 </Button>
             </Modal.Footer>
@@ -49,16 +42,4 @@ const ModalAddRecipe = ({showModal, addRecipe, handleClose}) => {
     )
 };
 
-
-const mapDispatchToProps = dispatch => {
-    return {
-        addRecipe: (title, ingredients, howToCook) =>
-            addNewRecipeOnServer({
-                title,
-                ingredients,
-                howToCook
-            })(dispatch)
-    };
-};
-
-export default connect(null, mapDispatchToProps)(ModalAddRecipe);
+export default ModalAddRecipe;

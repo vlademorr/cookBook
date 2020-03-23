@@ -1,8 +1,8 @@
-.modal_accordion{
+.modal_accordion {
     margin-top: 10px;
 }
 
-.modal_accordion_toggle{
+.modal_accordion_toggle {
     display: flex;
     justify-content: center;
     height: 100%;
@@ -17,17 +17,16 @@
     margin-bottom: 0;
 }
 
-.modal_accordion_toggle:hover{
-    background-color: #d6dce7;
+.modal_accordion_toggle:hover {
+    background-color: #d7d7d7;
     transition: background-color linear 0.1s;
 }
 
-.modal_card_body{
-    font-family: 'Simonetta';
+.modal_card_body {
     white-space: pre-wrap;
 }
 
-.modal_card_header{
+.modal_card_header {
     display: flex;
     justify-content: center;
 }

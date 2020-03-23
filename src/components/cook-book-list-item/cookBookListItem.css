@@ -1,33 +1,41 @@
-.accordion{
+.accordion {
     margin-top: 10px;
 }
 
-.accordion_toggle{
+.accordion_toggle {
     display: flex;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
     width: 100%;
     transition: background-color linear 0.1s;
 }
 
-.accordion_toggle p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 0;
+.accordion_toggle:hover .btn_inside_description {
+    transition: opacity 0.1s linear;
+    opacity: 1;
 }
 
-.accordion_toggle:hover{
-    background-color: #CCFFCC;
+.btn_inside_description {
+    width: 105px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.accordion_toggle p {
+    margin: 0 15px;
+    max-height: 50px;
+    max-width: 250px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.accordion_toggle:hover {
+    background-color: #d7d7d7;
     transition: background-color linear 0.1s;
 }
 
-.card_body{
-    font-family: 'Simonetta';
+.card_body {
     white-space: pre-wrap;
-}
-
-.buttons_inside{
-    display: flex;
-    margin-top: 10px;
 }

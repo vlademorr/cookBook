@@ -1,6 +1,6 @@
-import BtnPreviousRecipeVersions from "./btn-previous-recipe-versions/btnPreviousRecipeVersions";
-import BtnChangeRecipe from "./btn-change/btnChange";
-import BtnAddRecipes from "./btn-add-recipes/btnAddRecipes";
+import BtnPreviousRecipeVersions from "./btn-previous-recipe-versions";
+import BtnChangeRecipe from "./btn-change";
+import BtnAddRecipes from "./btn-add-recipes";
 
 export {
     BtnPreviousRecipeVersions,
